@@ -1,9 +1,17 @@
 module.exports = ({ env }) => ({
-  host: env('HOST', '0.0.0.0'),
-  port: env.int('PORT', 1337),
+  host: env('HOST'),
+  port: env.int('PORT'),
+  url: env('URL'),
+  proxy: env.bool('PROXY'),
+  cron: {
+    enabled: env.bool('CRON_ENABLED'),
+  },
   admin: {
     auth: {
-      secret: env('ADMIN_JWT_SECRET', '85fc239d2adc76107f49cc4856f5e631'),
+      secret: env('ADMIN_AUTH_SECRET'),
     },
+    host: env('HOST'),
+    port: env.int('ADMIN_PORT'),
+    url: env('ADMIN_URL'),
   },
 });
