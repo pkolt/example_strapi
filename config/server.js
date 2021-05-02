@@ -10,8 +10,6 @@ module.exports = ({ env }) => ({
     auth: {
       secret: env('ADMIN_AUTH_SECRET'),
     },
-    host: env('HOST'),
-    port: env.int('ADMIN_PORT'),
     url: env('ADMIN_URL'),
   },
 });
