@@ -8,9 +8,12 @@
     "start": "ENV_PATH=.env.production strapi start",
     "build:dev": "ENV_PATH=.env.development strapi build",
     "build": "ENV_PATH=.env.production strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "build-types": "sts -c .sts.config.js"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "strapi-to-typescript": "^2.0.6"
+  },
   "dependencies": {
     "knex": "0.21.18",
     "mysql": "^2.18.1",
